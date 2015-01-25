@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Treeh</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,28 +42,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Treeh</a>
+                <a class="navbar-brand" href="index.html">TREEH</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">¿Qué hacemos?</a>
+                        <a href="#">¿QUE HACEMOS?</a>
                     </li>
                     <li>
-                        <a href="#">¿Quiénes Somos?</a>
+                        <a href="#">¿QUIENES SOMOS?</a>
                     </li>
                     <li>
-                        <a href="#">Tecnologías</a>
+                        <a href="#">TECNOLOGIAS</a>
                     </li>
                     <li>
-                        <a href="#">Proceso</a>
+                        <a href="#">PROCESO</a>
                     </li>
                     <li>
-                        <a href="#">Nuestro Trabajo </a>
+                        <a href="#">NUESTRO TRABAJO</a>
                     </li>
                     <li>
-                        <a href="#">Contactanos</a>
+                        <a href="#">CONTACTANOS</a>
                     </li>
                 </ul>
             </div>
@@ -71,46 +71,9 @@
         </div>
         <!-- /.container -->
     </nav>
-
-    <!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
+<div class="parallax" >
+    <section class="cd-intro">
+    </section>
 
     <!-- Page Content -->
     <div class="container">
@@ -474,6 +437,7 @@
         </footer>
 
     </div>
+    </div>
     <!-- /.container -->
 
     <!-- jQuery -->
@@ -486,7 +450,18 @@
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
-    })
+    });
+
+    window.onload=function() {
+        $('.parallax').scroll(function () {
+            var scroll = $('.parallax').scrollTop();
+            if (scroll >= 700) {
+                $(".navbar").addClass("scrolling");
+            } else {
+                $(".navbar").removeClass("scrolling");
+            }
+         });
+    }
     </script>
 
 </body>
